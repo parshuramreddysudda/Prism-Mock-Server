@@ -1,0 +1,27 @@
+openapi: 3.0.0
+info:
+  title: Overview Data
+  version: '1.0'
+components:
+  schemas:
+    React:
+      type: object
+      properties:
+        name:
+          type: string
+          enum:
+            - React   
+servers:
+  - url: 'http://127.0.0.1:4010'
+paths:
+  /basic:
+    get:
+      summary: Your GET endpoint
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/React'
