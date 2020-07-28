@@ -39,9 +39,8 @@ components:
       type: object
       properties:
         name:
-          type: string
-          enum:
-            - Azure
+          example: "As45da"
+          pattern: "^[A-Z][a-z][1-9][1-9][a-z][a-z]$"   
         value:
            example: 38
            pattern: "^[1-9][1-9]$"        
@@ -62,7 +61,7 @@ components:
 servers:
   - url: 'http://localhost:3000'
 paths:
-  /intermediate:
+  /advance1:
     get:
       summary: Your GET endpoint
       tags: []
